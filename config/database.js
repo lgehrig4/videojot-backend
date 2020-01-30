@@ -1,5 +1,7 @@
+const keys = require('./keys_dev');
+
 if (process.env.NODE_ENV === 'production') {
-  module.exports = {mongoURI: 'mongodb+srv://lgehrig4:ReneeDBcode1!@cluster0-5yfak.mongodb.net/test?retryWrites=true'}
+  module.exports = {mongoURI: keys.productionURI}
 } else {
-  module.exports = {mongoURI: 'mongodb://localhost/vidjot-dev'}
+  module.exports = {mongoURI: keys.localURI}
 }
